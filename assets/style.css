@@ -1,0 +1,204 @@
+/* CAF Confeuro Orbassano - foglio di stile unico */
+:root{
+  --verde:#1a4d2e; --verde-chiaro:#2d6a4a; --sabbia:#f5f3ee;
+  --testo:#1a1a1a; --grigio:#5a5a5a; --bordo:#ddd8cf; --bianco:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:18px; line-height:1.65; color:var(--testo); background:var(--bianco);
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+a{color:var(--verde);text-decoration:underline;text-underline-offset:2px}
+a:hover{color:var(--verde-chiaro)}
+
+/* Intestazione */
+header{background:var(--verde);color:var(--bianco);padding:14px 0}
+header a{color:var(--bianco);text-decoration:none}
+.head-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-size:19px;font-weight:700;line-height:1.25}
+.logo span{display:block;font-size:14px;font-weight:400;opacity:.9}
+.head-tel{font-size:16px;font-weight:700;line-height:1.45;text-align:right}
+.head-tel a{display:inline-block}
+.head-tel a{text-decoration:none;white-space:nowrap}
+.head-tel a:hover{text-decoration:underline}
+
+/* Navigazione */
+nav{background:var(--sabbia);border-bottom:1px solid var(--bordo)}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:4px;padding:8px 0}
+nav a{display:block;padding:8px 12px;font-size:16px;text-decoration:none;border-radius:4px}
+nav a:hover,nav a[aria-current="page"]{background:var(--verde);color:var(--bianco)}
+
+/* Sezione di apertura */
+.hero{background:var(--sabbia);padding:40px 0;border-bottom:3px solid var(--verde)}
+.hero h1{font-size:34px;line-height:1.2;margin-bottom:12px}
+.hero p.claim{font-size:20px;color:var(--grigio);margin-bottom:24px}
+.hero .dove{font-size:18px;margin-bottom:24px}
+
+/* Pulsanti */
+.azioni{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.btn{
+  display:inline-block;padding:15px 26px;border-radius:6px;font-size:18px;
+  font-weight:700;text-decoration:none;text-align:center;border:2px solid var(--verde);
+}
+.btn-pieno{background:var(--verde);color:var(--bianco)}
+.btn-pieno:hover{background:var(--verde-chiaro);color:var(--bianco)}
+.btn-vuoto{background:var(--bianco);color:var(--verde)}
+.btn-vuoto:hover{background:var(--sabbia);color:var(--verde)}
+
+/* Contenuto */
+main{padding:40px 0}
+h2{font-size:26px;margin:36px 0 14px;line-height:1.25}
+h2:first-child{margin-top:0}
+h3{font-size:20px;margin:26px 0 10px}
+p{margin-bottom:16px}
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:8px}
+
+.box{background:var(--sabbia);border-left:4px solid var(--verde);padding:20px 22px;margin:26px 0;border-radius:0 6px 6px 0}
+.box h3{margin-top:0}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+
+.servizi{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.servizi li{margin:0}
+.servizi a{
+  display:block;padding:18px 20px;background:var(--bianco);border:2px solid var(--bordo);
+  border-radius:6px;text-decoration:none;height:100%;
+}
+.servizi a:hover{border-color:var(--verde);background:var(--sabbia)}
+.servizi strong{display:block;font-size:19px;color:var(--verde);margin-bottom:4px}
+.servizi span{color:var(--grigio);font-size:16px}
+
+table{width:100%;border-collapse:collapse;margin:22px 0;font-size:17px}
+th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--bordo);vertical-align:top}
+th{background:var(--sabbia);font-weight:700}
+
+.nota{font-size:16px;color:var(--grigio);font-style:italic}
+
+/* Riquadro contatti */
+.contatti-box{border:2px solid var(--verde);border-radius:8px;padding:24px;margin:34px 0}
+.contatti-box h2{margin-top:0}
+.contatti-box dl{margin:0}
+.contatti-box dt{font-weight:700;margin-top:14px}
+.contatti-box dt:first-child{margin-top:0}
+.contatti-box dd{margin:0 0 4px}
+
+/* Piè di pagina */
+footer{background:var(--verde);color:var(--bianco);padding:38px 0 30px;margin-top:50px;font-size:16px}
+/* I link del fondo pagina non sono sottolineati: troppe sottolineature
+   su fondo scuro rendono il blocco illeggibile */
+footer a{color:var(--bianco);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer h3{font-size:15px;margin:0 0 14px;text-transform:uppercase;letter-spacing:.7px;
+          padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.25);white-space:nowrap}
+footer p{margin:0 0 14px;line-height:1.5}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px 36px}
+.foot-grid ul{list-style:none;margin:0}
+.foot-grid li{margin-bottom:9px}
+/* Etichetta sopra ogni gruppo di contatti */
+.foot-et{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.8px;
+         color:rgba(255,255,255,.65);margin-bottom:3px}
+.foot-sede{font-size:17px}
+.nowrap{white-space:nowrap}
+.foot-mail{word-break:break-word}
+.foot-basso{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25);
+            font-size:14px;line-height:1.6;color:rgba(255,255,255,.82)}
+
+/* Barra fissa su telefono */
+.barra-mobile{display:none}
+@media(max-width:700px){
+  body{font-size:17px;padding-bottom:84px}
+  .wrap{padding:0 16px}
+
+  /* Menu su una riga sola scorrevole: evita che occupi mezzo schermo.
+     La sfumatura a destra fa capire che si puo' trascinare. */
+  nav{position:relative}
+  nav::after{
+    content:"";position:absolute;top:0;right:0;bottom:0;width:28px;pointer-events:none;
+    background:linear-gradient(to right,rgba(245,243,238,0),rgba(245,243,238,.95));
+  }
+  nav ul{flex-wrap:nowrap;overflow-x:auto;padding:4px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav ul::-webkit-scrollbar{display:none}
+  nav li{flex:0 0 auto}
+  /* Bersagli comodi da toccare: almeno 44px di altezza */
+  nav a{white-space:nowrap;padding:12px 14px;font-size:16px}
+
+  .hero{padding:26px 0}
+  .hero h1{font-size:26px}
+  .hero p.claim{font-size:18px;margin-bottom:18px}
+  .hero .dove{font-size:17px}
+  h2{font-size:22px;margin:30px 0 12px}
+  h3{font-size:19px}
+
+  .azioni{gap:10px}
+  .azioni .btn{flex:1 1 100%;padding:17px 20px}
+
+  /* Tabelle: meno margini interni per non stringere troppo le colonne */
+  table{font-size:16px}
+  th,td{padding:10px 8px}
+
+  .box{padding:18px 18px;margin:22px 0}
+  .servizi a{padding:16px 18px}
+  .contatti-box{padding:20px 18px}
+
+  /* Voci del fondo pagina piu' distanziate: si toccano con il pollice */
+  .foot-grid{gap:26px}
+  .foot-grid li{margin-bottom:6px}
+  .foot-grid li a{display:inline-block;padding:9px 0}
+  /* I link dei servizi su due colonne: il fondo pagina resta meta' piu' corto */
+  .foot-grid ul{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+  footer p{margin-bottom:16px}
+  footer a{display:inline-block;padding:3px 0}
+
+  .barra-mobile{
+    display:flex;position:fixed;bottom:0;left:0;right:0;z-index:99;
+    border-top:1px solid rgba(255,255,255,.25);
+    box-shadow:0 -2px 10px rgba(0,0,0,.18);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .barra-mobile a{
+    flex:1;padding:15px 4px;text-align:center;background:var(--verde);color:var(--bianco);
+    text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap;
+  }
+  .barra-mobile a+a{border-left:1px solid rgba(255,255,255,.25)}
+}
+
+/* Riquadri e link danno un ritorno visivo al tocco */
+@media(hover:none){
+  a{-webkit-tap-highlight-color:rgba(26,77,46,.18)}
+  .btn:active{transform:translateY(1px)}
+  .servizi a:active{background:var(--sabbia);border-color:var(--verde)}
+}
+
+/* Schermi molto stretti: si guadagna spazio dove serve */
+@media(max-width:360px){
+  body{font-size:16px}
+  .hero h1{font-size:23px}
+  .barra-mobile a{font-size:13px;padding:14px 2px}
+  th,td{padding:9px 6px;font-size:15px}
+}
+@media print{header,nav,footer,.barra-mobile,.azioni{display:none}}
+
+/* Foto della sede */
+.foto-sede{margin:0 0 22px;max-width:620px}
+.foto-sede-griglia{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.foto-sede img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:6px;border:1px solid var(--bordo)}
+.foto-sede figcaption{font-size:15px;color:var(--grigio);margin-top:8px;font-style:italic;line-height:1.45}
+@media(max-width:700px){.foto-sede{max-width:100%}
+  .foto-sede-griglia{grid-template-columns:1fr;gap:8px}
+}
+
+/* Foto del gruppo: da sola, non nella griglia a due colonne */
+.foto-staff{max-width:620px;margin:26px 0}
+
+/* Avviso di scadenza in evidenza: si toglie cancellando il blocco .avviso dalla home */
+.avviso{background:#fff8e6;border:2px solid #c9a227;border-radius:6px;padding:20px 22px;margin:0 0 26px}
+.avviso h2{margin-top:0;font-size:22px;color:#8a6d10}
+.avviso p{margin-bottom:10px}
+.avviso p:last-child{margin-bottom:0}
+.avviso .data{font-weight:700;color:#8a6d10}
+.grazie{background:var(--sabbia);border:1px solid var(--bordo);border-left:4px solid var(--verde);padding:22px 24px;margin:26px 0;border-radius:0 6px 6px 0}
+.grazie h2{margin-top:0;font-size:22px}
+.grazie p:last-child{margin-bottom:0}
