@@ -202,3 +202,5 @@ footer p{margin:0 0 14px;line-height:1.5}
 .grazie{background:var(--sabbia);border:1px solid var(--bordo);border-left:4px solid var(--verde);padding:22px 24px;margin:26px 0;border-radius:0 6px 6px 0}
 .grazie h2{margin-top:0;font-size:22px}
 .grazie p:last-child{margin-bottom:0}
+.foot-basso a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.foot-basso a:hover{text-decoration:none}
