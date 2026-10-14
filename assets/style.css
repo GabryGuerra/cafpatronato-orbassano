@@ -204,3 +204,8 @@ footer p{margin:0 0 14px;line-height:1.5}
 .grazie p:last-child{margin-bottom:0}
 .foot-basso a{color:#fff;text-decoration:underline;text-underline-offset:2px}
 .foot-basso a:hover{text-decoration:none}
+
+/* Tre pulsanti nella barra fissa: su schermi stretti il testo deve starci. */
+@media(max-width:420px){
+  .barra-mobile a{font-size:13px;padding:15px 2px;letter-spacing:-.2px}
+}
